@@ -104,7 +104,7 @@ function HomeContent({ locale }: { locale: string }) {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-zinc-800/50 flex flex-wrap gap-1.5">
+              <div className="mt-6 pt-4 border-t border-zinc-800/50 flex flex-wrap gap-1.5 "dir="ltr">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}

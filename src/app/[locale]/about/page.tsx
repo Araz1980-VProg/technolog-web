@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import { QRCodeSVG } from 'qrcode.react';
+
 import { 
   Cpu, 
   Layers, 
@@ -33,9 +35,9 @@ export default function AboutPage() {
       tr: 'Yazılım Mantığı ile Fiziksel Gerçeklik Arasındaki Köprü.',
     }[currentLocale],
     manifesto: {
-      en: 'TECHnolog was founded on a simple truth: software alone cannot solve tangible physical challenges. We engineer complete end-to-end ecosystems—from thermodynamic and process modeling to embedded electronics, precision CNC/3D fabrication, and modern AI-driven cloud backends.',
-      fa: 'تکنولاگ (TECHnolog) بر پایه یک اصل شکل گرفت: نرم‌افزار به‌تنهایی قادر به حل مسائل جهان فیزیکی نیست. رسالت ما خلق چرخه‌های کامل مهندسی است؛ از مدل‌سازی فرآیندی و ترمودینامیک تا بردهای امبدد، ساخت دقیق سه‌بعدی و مکانیک، تا اتصال به سرورهای مدرن ابری و هوش مصنوعی.',
-      tr: 'TECHnolog temel bir ilke üzerine kuruldu: Yazılım tek başına fiziksel zorlukları çözemez. Termodinamik ve süreç modellemesinden gömülü sistemlere, hassas üretime ve modern yapay zekâ altyapılarına kadar uçtan uca eksiksiz sistemler geliştiriyoruz.',
+      en: 'Technolog was founded on a simple truth: software alone cannot solve tangible physical challenges. We engineer complete end-to-end ecosystems—from thermodynamic and process modeling to embedded electronics, precision CNC/3D fabrication, and modern AI-driven cloud backends.',
+      fa: 'تکنولاگ (Technolog) بر پایه یک اصل شکل گرفت: نرم‌افزار به‌تنهایی قادر به حل مسائل جهان فیزیکی نیست. رسالت ما خلق چرخه‌های کامل مهندسی است؛ از مدل‌سازی فرآیندی و ترمودینامیک تا بردهای امبدد، ساخت دقیق سه‌بعدی و مکانیک، تا اتصال به سرورهای مدرن ابری و هوش مصنوعی.',
+      tr: 'Technolog temel bir ilke üzerine kuruldu: Yazılım tek başına fiziksel zorlukları çözemez. Termodinamik ve süreç modellemesinden gömülü sistemlere, hassas üretime ve modern yapay zekâ altyapılarına kadar uçtan uca eksiksiz sistemler geliştiriyoruz.',
     }[currentLocale],
     matrixTitle: {
       en: 'Multidisciplinary Matrix',
@@ -101,7 +103,7 @@ export default function AboutPage() {
       },
     ],
     principlesTitle: {
-      en: 'The TECHnolog Axioms',
+      en: 'The Technolog Axioms',
       fa: 'اصول حاکم بر توسعه در تکنولاگ',
       tr: 'Temel Mühendislik İlkeleri',
     }[currentLocale],
@@ -187,6 +189,18 @@ export default function AboutPage() {
         fa: 'پیام شما دریافت شد. در اسرع وقت از طریق ایمیل پاسخ داده خواهد شد.',
         tr: 'Mesajınız alındı. En kısa sürede teknik kanaldan dönüş yapılacaktır.',
       }[currentLocale],
+    },
+    instagramSection: {
+      title: {
+        en: 'Follow us on Instagram',
+        fa: 'ما را در اینستاگرام دنبال کنید',
+        tr: 'Bizi Instagram\'da takip edin'
+      },
+      desc: {
+        en: 'Scan to see our latest works & behind-the-scenes.',
+        fa: 'اسکن کنید تا جدیدترین کارها و پشت‌صحنه‌ها را ببینید.',
+        tr: 'En son çalışmalarımızı ve sahne arkasını görmek için tarayın.'
+      }
     },
   };
 
@@ -383,8 +397,26 @@ export default function AboutPage() {
               </form>
             )}
           </div>
-
         </div>
+
+        <div className="mt-8 p-4 rounded-xl border border-zinc-800 bg-zinc-900/50 flex items-center gap-6">
+          <QRCodeSVG 
+            value="https://instagram.com/Technolog.hq" 
+            size={100}
+            bgColor="transparent"
+            fgColor="#22d3ee" 
+            className="border-2 border-zinc-700 rounded-lg p-1"
+          />
+          <div className="space-y-1">
+            <h4 className="text-white font-medium">
+              {content.instagramSection.title[currentLocale as 'en' | 'fa' | 'tr']}
+            </h4>
+            <p className="text-sm text-zinc-400">
+              {content.instagramSection.desc[currentLocale as 'en' | 'fa' | 'tr']}
+            </p>
+          </div>
+        </div>
+
       </section>
     </div>
   );

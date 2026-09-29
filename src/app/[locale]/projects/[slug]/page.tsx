@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import { ArrowLeft, ArrowRight, Tag, Layers, Cpu } from 'lucide-react';
+import { BottlenecksSection } from '../BottlenecksSection'; // مسیر اصلاح شده
 
 export async function generateStaticParams() {
   const locales = ['en', 'fa', 'tr'];
@@ -68,6 +69,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           </p>
         </div>
 
+        {/* اضافه کردن گلوگاه‌های فنی */}
+        {project.bottlenecks && (
+          <BottlenecksSection bottlenecks={project.bottlenecks} />
+        )}
+
         {/* بخش برچسب‌های فنی (Tech Stack & Tags) */}
         <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 space-y-3">
           <div className="flex items-center gap-2 text-sm font-semibold text-zinc-300">
@@ -76,13 +82,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               {locale === 'fa' ? 'فناوری‌ها و تگ‌ها' : locale === 'tr' ? 'Teknolojiler' : 'Technologies & Tags'}
             </span>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" dir="ltr">
             {project.tags.map((tag) => (
               <span
                 key={tag}
                 className="px-2.5 py-1 text-xs font-mono bg-zinc-800 border border-zinc-700 text-zinc-300 rounded-md"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>
