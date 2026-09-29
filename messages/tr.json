@@ -1,0 +1,17 @@
+{
+    "Navigation": {
+      "home": "Ana Sayfa",
+      "projects": "Projeler",
+      "lab": "Laboratuvar & Ar-Ge",
+      "about": "Hakkımda",
+      "contact": "İletişim"
+    },
+    "Hero": {
+      "badge": "Mühendislik • Hızlı Prototipleme • 3D Baskı",
+      "title": "Kavramları Fiziksel Gerçekliğe Dönüştürmek",
+      "subtitle": "Mekatronik, ileri düzey 3D prototipleme ve yazılım destekli donanım mühendisliği vitrini.",
+      "exploreBtn": "Projeleri İncele",
+      "labBtn": "Laboratuvara Gir"
+    }
+  }
+  

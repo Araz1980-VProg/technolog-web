@@ -1,0 +1,17 @@
+{
+    "Navigation": {
+      "home": "Home",
+      "projects": "Projects",
+      "lab": "Lab & R&D",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "Hero": {
+      "badge": "Engineering • Prototyping • 3D Printing",
+      "title": "Bringing Concepts into Physical Reality",
+      "subtitle": "Showcase of mechatronics, advanced rapid prototyping, and software-driven hardware engineering.",
+      "exploreBtn": "Explore Projects",
+      "labBtn": "Enter The Lab"
+    }
+  }
+  
