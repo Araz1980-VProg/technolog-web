@@ -293,7 +293,7 @@ export default function AboutPage() {
 
             <div className="space-y-4 pt-2">
             <a 
-                href="mailto:contact@technolog.ir" 
+                href="info@technologhq.com" 
                 className="flex items-center gap-3 p-4 rounded-xl border border-zinc-900 bg-zinc-900/40 hover:border-zinc-700 hover:bg-zinc-900/80 transition-all text-sm group"
             >
                 <div className="w-10 h-10 rounded-lg bg-zinc-800/80 flex items-center justify-center text-cyan-400 group-hover:text-cyan-300">
@@ -301,7 +301,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                 <div className="text-xs text-zinc-500">{content.contactSection.emailLabel}</div>
-                <div className="font-mono text-zinc-200">contact@technolog.ir</div>
+                <div className="font-mono text-zinc-200">info@technologhq.com</div>
                 </div>
             </a>
 
